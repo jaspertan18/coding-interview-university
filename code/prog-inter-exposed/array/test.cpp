@@ -9,8 +9,8 @@ void print(int arr[], int size) {
 }
 
 int main() {
-    int *arr1 = new int[5];
-    int *arr2 = new int[10];
+    int arr1[5];
+    int arr2[10];
 
     for (int i = 0; i < 5; i++)
         arr1[i] = i + 1;
@@ -20,7 +20,7 @@ int main() {
 
     print(arr1, 5);
 
-    delete [] arr1;
+
 
     return 0;
 }
