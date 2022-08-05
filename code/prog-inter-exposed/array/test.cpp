@@ -2,25 +2,41 @@
 
 using namespace std;
 
-void print(int arr[], int size) {
-    for (int i = 0; i < size; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+struct Node {
+    int data;
+    Node *next;
+};
+
+void push_back(Node* &head, int value) {
+    Node *p = new Node;
+    p->data = value;
+    p->next = head;
+
+    head = p;
+
+    delete p;
+}
+
+void plusOne(int *num) {
+    (*num)++;
 }
 
 int main() {
-    int arr1[5];
-    int arr2[10];
+    // Node *head = nullptr;
 
-    for (int i = 0; i < 5; i++)
-        arr1[i] = i + 1;
+    // push_back(head, 10);
 
-    for (int i = 0; i < 10; i++)
-        arr2[i] = i + 1;
+    // Node *temp = head;
+    // do {
+    //     cout << temp->data << endl;
+    //     temp = temp->next;
+    // } while (temp != nullptr);
 
-    print(arr1, 5);
+    int test = 10;
+    plusOne(&test);
+    cout << test << endl;
 
 
-
+    
     return 0;
 }
