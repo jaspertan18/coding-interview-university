@@ -2,39 +2,14 @@
 
 using namespace std;
 
-struct Node {
-    int data;
-    Node *next;
-};
-
-void push_back(Node* &head, int value) {
-    Node *p = new Node;
-    p->data = value;
-    p->next = head;
-
-    head = p;
-
-    delete p;
-}
-
-void plusOne(int *num) {
-    (*num)++;
+int increase(int x) {
+    x++;
+    return x;
 }
 
 int main() {
-    // Node *head = nullptr;
-
-    // push_back(head, 10);
-
-    // Node *temp = head;
-    // do {
-    //     cout << temp->data << endl;
-    //     temp = temp->next;
-    // } while (temp != nullptr);
-
-    int test = 10;
-    plusOne(&test);
-    cout << test << endl;
+    const int x = 8;
+    cout << increase(x) << endl;
 
 
     
